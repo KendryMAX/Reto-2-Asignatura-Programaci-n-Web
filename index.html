@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content='Mozilla Firefox: qué es, su licencia y su cuota de mercado, junto al formulario de registro del sitio.'>
+  <meta name='keywords' content='Mozilla Firefox, navegador web, software libre, cuota de mercado, formulario de registro'>
+  <meta name='author' content='Kendry Sotolongo Acosta'>
+  <title>Evaluación Final de Programación Web I - Mozilla Firefox</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+
+  <div class='contenedor-pagina'>
+
+    <header class='encabezado'>
+      <img src='banner.jpg' alt='Encabezado del sitio con el texto y el logotipo de Mozilla Firefox'>
+    </header>
+
+    <div class='cuerpo'>
+
+      <main id='inicio' class='vista'>
+        <h1>Mozilla Firefox</h1>
+
+        <p>Mozilla Firefox es un navegador web libre descendiente de Mozilla Application Suite,
+          desarrollado por la Corporación Mozilla, la Fundación Mozilla y un gran número de voluntarios
+          externos.[5] Firefox es un navegador multiplataforma y está disponible en varias versiones de
+          Microsoft Windows, Mac OS X, GNU/Linux y algunos sistemas basados en Unix.[6] Su código fuente
+          es software libre, publicado bajo una triple licencia GPL / LGPL / MPL .[7]</p>
+
+        <p>A febrero de 2010 según Marketshare[8] cuenta con el 24,23% de cuota de navegador, siendo el
+          segundo navegador más usado detrás de todas las versiones sumadas de Internet Explorer. Sin
+          embargo, según w3schools cuenta con el 46,5%,[9] superando a todas las versiones sumadas de
+          Internet Explorer y siendo el navegador más usado en la actualidad. Cabe destacar que ambos
+          cálculos se realizan con base en datos recolectados sobre el tráfico en sus propias redes o
+          websites que usan sus servicios, no siendo por lo tanto muestras representativas desde el punto
+          de vista formal de la estadística.</p>
+      </main>
+
+      <main id='formulario' class='vista' hidden>
+        <h1>Formulario de Registro</h1>
+
+        <form id='formulario-registro' class='formulario' novalidate>
+          <div class='campo'>
+            <label for='nombre'>Nombre</label>
+            <input type='text' id='nombre' name='nombre' pattern='[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]+' autocomplete='name' required>
+            <p class='error' hidden></p>
+          </div>
+
+          <div class='campo'>
+            <label for='ci'>CI</label>
+            <input type='text' id='ci' name='ci' inputmode='numeric' pattern='[0-9]{11}' autocomplete='off' required>
+            <p class='error' hidden></p>
+          </div>
+
+          <div class='campo'>
+            <label for='contrasena'>Contraseña</label>
+            <input type='password' id='contrasena' name='contrasena' autocomplete='new-password' required>
+            <p class='error' hidden></p>
+          </div>
+
+          <div class='campo'>
+            <label for='confirmacion'>Confirmación</label>
+            <input type='password' id='confirmacion' name='confirmacion' autocomplete='new-password' required>
+            <p class='error' hidden></p>
+          </div>
+
+          <div class='acciones'>
+            <button type='submit' class='boton-primario'>Enviar</button>
+            <button type='reset' class='boton-secundario'>Limpiar</button>
+          </div>
+        </form>
+      </main>
+
+      <nav class='menu' aria-label='Navegación principal'>
+        <ul class='menu-lista'>
+          <li><a href='#inicio'>Inicio</a></li>
+          <li><a href='#formulario'>Formulario de registro</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <footer class='pie'>
+      <p>Evaluación Final realizada por <span class='nombre-autor' tabindex='0' data-nombre='Kendry Sotolongo Acosta'>Nombre estudiante</span>. Estándares web empleados: XHTML 1.0 Strict y CSS.</p>
+    </footer>
+
+  </div>
+
+  <dialog id='dialogo-exito' class='dialogo'>
+    <h2>Registro enviado</h2>
+    <p>Su registro se envió correctamente.</p>
+    <form method='dialog'>
+      <button type='submit' class='boton-primario'>OK</button>
+    </form>
+  </dialog>
+
+  <script src='script.js'></script>
+</body>
+</html>
